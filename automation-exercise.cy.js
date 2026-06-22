@@ -34,7 +34,7 @@ describe('User registration and Cleanup', () => {
     cy.get('#last_name').type('Macharia');
     cy.get('#company').type('Nexavi AI');
     cy.get('#address1').type('34 1001 thika');
-    cy.get('#country').select('Singapore'); // Note: 'Kenya' is not an option in this site's dropdown, changed to Singapore to avoid crash
+    cy.get('#country').select('Singapore');
     cy.get('#state').type('Nairobi');
     cy.get('#city').type('Karen');
     cy.get('#zipcode').type('1001');
