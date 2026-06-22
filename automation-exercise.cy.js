@@ -9,6 +9,8 @@ describe('Homepage validation', () => {
   })
 })
 
+// Checks that the store address landing page opens completely and elements like the logo and header nav menu are visible.
+
 //test case two
 describe('User registration and Cleanup', () => {
   it('should successfully register and delete a new user account', () => {
@@ -53,6 +55,8 @@ describe('User registration and Cleanup', () => {
     cy.get('.btn-primary').contains('Continue').click();
   });
 });
+
+//Uses a dynamic email timestamp variant to create an account, fills out details, asserts creation confirmation, and deletes the profile at the end for test environment cleanliness.
 
 //test case three
 describe('Login With Valid Credentials', () => {
@@ -106,6 +110,8 @@ describe('Login With Valid Credentials', () => {
   });
 });
 
+//Utilizes a custom, reusable macro shortcut (cy.login) to sign into the system with established data parameters and performs a clean validation sequence before logging back out.
+
 ///test case four
 describe('Login With Invalid Credentials', () => {
   it('should display an error message when logging in with invalid credentials', () => {
@@ -120,6 +126,8 @@ describe('Login With Invalid Credentials', () => {
     cy.contains('Your email or password is incorrect!').should('be.visible');
   });
 });
+
+// Intentionally triggers an unauthorized entry sequence to ensure the system application correctly surfaces validation error banners.
 
 //test case five
 describe('Test Case 5: Search for a Product', () => {
@@ -140,6 +148,9 @@ describe('Test Case 5: Search for a Product', () => {
     cy.get('.features_items').should('contain.text', 'Dress');
   });
 });
+
+//Inputs text keywords inside the store catalog directory filter input field to check that relevant search results load correctly.
+
 
 //test case six
 describe('View Product Details', () => {
@@ -167,6 +178,8 @@ describe('View Product Details', () => {
   });
 });
 
+//Inputs text keywords inside the store catalog directory filter input field to check that relevant search results load correctly.
+
 //test case seven
 describe('Add Product to Cart', () => {
   it('should add the first product to the cart and verify its details inside the cart page', () => {
@@ -189,8 +202,9 @@ describe('Add Product to Cart', () => {
   });
 });
 
+// Verifies that clicking an item item card asset stores the item details in the persistence cart array and displays it inside the summary table layout rows.
 
-//test case nine
+//test case eight
 describe('Submit Contact Us Form', () => {
   it('should fill out the contact form, handle the browser alert, and submit successfully', () => {
     cy.visit('https://automationexercise.com');
@@ -222,7 +236,7 @@ describe('Submit Contact Us Form', () => {
   });
 });
 
-
+// Fills out inquiry details, attaches a virtual file stream object directly to the file input system node, and logs a native window interceptor hook to handle the browser alert popups seamlessly.
 
 //challanges
 describe('Challenge Tasks', () => {
