@@ -60,12 +60,10 @@ describe('User registration and Cleanup', () => {
 
 //test case three
 describe('Login With Valid Credentials', () => {
-  // Store dynamic credentials that work across multiple steps
   const uniqueEmail = `user_${Date.now()}@test.com`;
   const password = '@machariaMary2026';
   const username = 'marymacharia';
 
-  // This block runs ONCE before the actual test starts to set up our account
   before( () => {
     cy.visit('https://automationexercise.com/');
     cy.contains('Signup / Login').click();
